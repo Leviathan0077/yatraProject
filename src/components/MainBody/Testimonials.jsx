@@ -50,7 +50,7 @@ const Testimonials = () => {
                 <div className="absolute bg-white/20 w-16 h-6 -rotate-[10deg] -left-5 top-0 translate-y-1/2" />
                 <p className="text-4xl text-center outfit-regular font-light mt-3">Travelers love our locals...</p>
             </div>
-            <div className="flex items-center gap-10 mt-10 px-44">
+            <div className="flex items-center gap-10 mt-10 lg:px-44 md:px-20 px-10 lg:flex-nowrap flex-wrap-reverse justify-center">
             <div className="relative">
             <img src={doubleQuote} alt="double-quote" className="w-20 h-16 absolute -top-5 -left-20 opacity-20" />
                 <div className="overflow-hidden relative">
@@ -71,7 +71,7 @@ const Testimonials = () => {
                     </div>
                 </div>
                 </div>
-                <div className="min-w-96 max-w-96 aspect-square p-2 rounded-full overflow-hidden border border-white">
+                <div className="max-w-96 aspect-square p-2 rounded-full overflow-hidden border border-white">
                     <img src={image} alt="kedarnath" className="w-full h-full object-cover rounded-full border-8 border-white"/>
                 </div>
             </div>

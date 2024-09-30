@@ -27,7 +27,7 @@ const Featured = () => {
                             borderTopLeftRadius : '9999px',
                         }
                     }></div>
-                    <h3 className="text-5xl tracking-wide text-gray-300 great-vibes-regular">Secure Your Dream Vacation Today!</h3>
+                    <h3 className="lg:text-5xl md:text-3xl text-2xl md:max-w-none max-w-80 tracking-wide text-gray-300 great-vibes-regular">Secure Your Dream Vacation Today!</h3>
                     <button className="px-5 py-2 font-semibold hover:bg-white bg-gray-300 rounded-md">Book Now!</button>
             </div>
         </div>

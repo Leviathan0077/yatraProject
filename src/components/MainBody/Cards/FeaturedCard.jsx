@@ -4,7 +4,7 @@ const FeaturedCard = ({ key, item, fromUpcoming }) => {
     return (
         <div 
         key={key}
-        className={`rounded-md overflow-hidden flex flex-col bg-white pb-2 ${fromUpcoming ? 'w-[350px] h-[400px]' : 'min-w-[300px] min-h-[490px] mr-16'}`}>
+        className={`rounded-md overflow-hidden flex flex-col bg-white pb-2 ${fromUpcoming ? 'max-w-[350px] w-full h-[400px]' : 'min-w-[300px] min-h-[490px] mr-16'}`}>
             <div className={`w-full ${fromUpcoming ? 'aspect-video' : 'aspect-square'}`}>
                 <img src={item?.image} alt="image" className="object-cover w-full h-full" />
             </div>
