@@ -1,5 +1,6 @@
 import mainlogo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
+
 const navLinks = [
   {
     name: "Home",
@@ -7,30 +8,29 @@ const navLinks = [
   },
   {
     name: "About Us",
-    link: "#",
+    link: "/about", // Update to valid route if applicable
   },
   {
     name: "Trek",
-    link: "#",
+    link: "/trek", // Update to valid route if applicable
   },
   {
     name: "Yatra",
-    link: "/page2",
+    link: "/page2", // Ensure this route is defined in your App
   },
   {
     name: "Tour",
-    link: "#",
+    link: "/tour", // Update to valid route if applicable
   },
   {
     name: "Article",
-    link: "#",
+    link: "/article", // Update to valid route if applicable
   },
 ];
 
 const HeaderNav = () => {
   return (
     <>
-      {" "}
       <div className="flex sticky top-0 z-50 justify-between items-center px-4 sm:px-10 md:px-24 py-4 bg-white/10 backdrop-blur-[5px]">
         <div>
           <img
@@ -41,13 +41,13 @@ const HeaderNav = () => {
         </div>
         <div className="hidden lg:flex justify-around flex-1 items-center">
           {navLinks.map((link) => (
-            <a
+            <Link // Change from <a> to <Link>
               className="text-gray-700 hover:text-yellow-500 transition-all duration-300 font-semibold"
-              href={link.link}
+              to={link.link} // Use 'to' instead of 'href'
               key={link.name}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex gap-4 items-center">
@@ -61,13 +61,13 @@ const HeaderNav = () => {
       </div>
       <div className="lg:hidden flex justify-around flex-1 items-center">
         {navLinks.map((link) => (
-          <a
+          <Link // Change from <a> to <Link>
             className="text-gray-700 hover:text-yellow-500 transition-all duration-300 font-semibold"
-            href={link.link}
+            to={link.link} // Use 'to' instead of 'href'
             key={link.name}
           >
             {link.name}
-          </a>
+          </Link>
         ))}
       </div>
     </>
