@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import mainlogo from "../../assets/images/logo.png";
 
 const navLinks = [
@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Trek", link: "#" },
   { name: "Yatra", link: "#" },
   { name: "Tour", link: "#" },
-  { name: "Article", link: "#" }
+  { name: "Article", link: "#" },
 ];
 
 const HeaderNav = () => {
