@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import bgImage from "../../assets/images/lake.jpeg";
 import { sliderDestinations } from "../../data/SliderDestination";
 import BannerCard from "./Cards/BannerCard";
 import { PlayCircle } from "@phosphor-icons/react";
 
 const Banner = () => {
-    const [cardOrder, setCardOrder] = useState([0, 1]);
+    const [cardOrder, setCardOrder] = useState([0, 1, 2]); // Show three cards
+    const [bgImage, setBgImage] = useState(sliderDestinations[0].background); // Initial background image
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -13,6 +13,9 @@ const Banner = () => {
                 const nextOrder = [...prevOrder];
                 const firstCard = nextOrder.shift(); // Remove the first card
                 nextOrder.push(firstCard); // Add it to the end
+
+                // Update the background image based on the current card
+                setBgImage(sliderDestinations[nextOrder[0]].background);
                 return nextOrder;
             });
         }, 3000); // Change every 3 seconds
@@ -22,8 +25,8 @@ const Banner = () => {
 
     return (
         <div 
-            className="bg-cover bg-center bg-no-repeat md:px-20 px-5 lg:py-32 py-20 flex items-center justify-center gap-10 md:flex-nowrap flex-wrap overflow-hidden" 
-            style={{ backgroundImage: `url(${bgImage})` }}
+            className="bg-cover bg-center bg-no-repeat md:px-20 px-5 py-20 flex items-center justify-center gap-10 overflow-hidden h-[60vh] md:h-[80vh]" 
+            style={{ backgroundImage: `url(${bgImage})` }} // Dynamically set the background
         >
             <div className='mb-20 md:mb-0'>
                 <h2 className="text-white text-6xl font-[Bodoni] mb-4">
