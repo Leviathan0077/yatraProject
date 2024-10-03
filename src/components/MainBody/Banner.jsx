@@ -18,7 +18,7 @@ const Banner = () => {
         setBgImage(sliderDestinations[nextOrder[0]].background);
         return nextOrder;
       });
-    }, 10000); // Change every 3 seconds
+    }, 10000); // Change every 10 seconds
 
     return () => clearInterval(interval); // Clean up the interval on unmount
   }, []);
